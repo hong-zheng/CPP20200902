@@ -1,0 +1,42 @@
+// 斐波那契数列
+class Solution {
+public:
+    int Fibonacci(int n) {
+        // 法一
+        if( n == 0 )
+            return  0 ;
+        if( n == 1 || n == 2)
+            return 1 ;
+        return Fibonacci(n-1) + Fibonacci(n-2) ;
+        
+        /*
+        // 法2
+        //创建一个数组，保存中间状态的解
+        int* F = new int[n+1];
+        //初始化F(0) , F(1)
+        F[0] = 0 ;
+        F[1] = 1 ;
+        for(int i = 2 ; i<= n ;++i)
+        {
+            F[i] = F[i-2] + F[i-1] ;
+        }
+        return F[n] ;
+        */
+        
+        /*
+        // 法三
+        if( n == 0) return 0 ;
+        int first = 1 ;
+        int second = 1 ;
+        int third = 1 ;
+        for(int i = 3 ; i<= n ; ++i)
+        {
+            third = first + second ;
+            first = second ;
+            second = third ;
+        }
+        return third ;
+        */
+    }
+};
+
